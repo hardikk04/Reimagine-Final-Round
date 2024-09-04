@@ -387,8 +387,30 @@ canvas()
 
 // Page 3 Animation
 
+const ringAnimation = () => {
+  var tl6 = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#rings-container",
+      scroller: "body",
+      start: "-20% 00%",
+      end: "30% 00%",
+      // pin: true,
+      scrub: 2,
+      // markers: true
+    }
+  })
 
-
+  .from("#rings-container #large-ring" , {
+    width: "0vw",
+    height: "0vw"
+  })
+  .from("#rings-container #small-ring" , {
+    width: "0vw",
+    height: "0vw",
+    delay: -0.2
+  })
+}
+ringAnimation()
 
 
 // Page 6 Animation
