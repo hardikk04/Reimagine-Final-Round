@@ -12,7 +12,24 @@ import fragmentShader from "./shaders/Imghover/fragment.glsl";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
-// Page 2 Animation
+// Page2 Animation
+const page2Animation = () => {
+  gsap.to(".page2-video>video", {
+    width: "100%",
+    scrollTrigger: {
+      scroller: "body",
+      trigger: "#page2",
+      start: "top 85%",
+      end: "top 0%",
+      // markers: true,
+      scrub: 1,
+    },
+  });
+};
+
+page2Animation();
+
+// Page 3 Animation
 const page3Animation = () => {
   class Sketch {
     constructor(options) {
@@ -175,6 +192,17 @@ page3Animation();
 // Page 6 Animation
 const page6Animation = () => {
   const page6Products = document.querySelector(".page6-products");
+
+  // gsap.to(".page6-contianer", {
+  //   scale: 0.97,
+  //   scrollTrigger: {
+  //     scroller: "body",
+  //     trigger: ".page6-products",
+  //     start: "top 0%",
+  //     end: "top -100%",
+  //     scrub: true,
+  //   },
+  // });
 
   page6Products.addEventListener("mousemove", (event) => {
     document.body.style.cursor = "none";
