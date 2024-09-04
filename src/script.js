@@ -185,6 +185,24 @@ const page3Animation = () => {
   }
 
   new Sketch({ dom: document.querySelector(".container-canvas") });
+
+  var tl2 = gsap.timeline({
+    scrollTrigger:{
+      trigger:"#pg3-lower",
+      scroller:"body",
+      // markers:true,
+      start:"top 100%",
+      end:"top 80%",
+      scrub:1
+    }
+  })
+  tl2
+  .to("#page3",{
+    backgroundColor:"black"
+  },"a")
+  .to("#page3 h1",{
+    color:"white"
+  },"a")
 };
 
 page3Animation();
@@ -434,7 +452,7 @@ function canvas(){
       trigger: `#canvas-card>canvas`,
       //   set start end according to preference
       start: `top top`,
-      end: `400% top`,
+      end: `300% top`,
       scroller: `body`,
     }
   })
@@ -447,7 +465,7 @@ function canvas(){
   })
   .to(canvas,{
     transform: "scale(.2)",
-    top: "13%",
+    top: "11%",
     left: "-2.3%",
     width:"88%"
   })
@@ -490,7 +508,7 @@ function canvas(){
     scroller: `body`,
   //   set start end according to preference
     start: `top top`,
-    end: `400% top`,
+    end: `300% top`,
   });
   
   }
