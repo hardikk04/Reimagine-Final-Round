@@ -170,12 +170,27 @@ body::-webkit-scrollbar-thumb:active {
 }
 #page1 #overlay-p1 #home-btn {
   background: linear-gradient(to right, #0844ff, #4d86f9);
-  width: fit-content;
   color: #fff;
+  width: fit-content;
   font-family: reg;
   padding: 1.3vw 4vw;
   border-radius: 50px;
   margin: 0 auto;
+  transition: all ease 1s;
+}
+
+#page1 #overlay-p1 #home-btn h5 {
+  font-weight: 500;
+}
+
+#page1 #overlay-p1 #home-btn:hover {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #4285f4;
+}
+
+#page1 #overlay-p1 #home-btn:hover h5 {
+  color: #4285f4;
 }
 
 /* Page1 End */
@@ -459,14 +474,28 @@ body::-webkit-scrollbar-thumb:active {
   margin:1.5vw 0 ;
 }
 #rings-container #ring-btn {
-  background: linear-gradient(to right, #0844ff, #4d86f9);
-  width: fit-content;
+  background: transparent;
+  border: 1px solid blue;
   color: #fff;
   font-family: reg;
   padding: 1.3vw 4vw;
   border-radius: 50px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
+
+#rings-container #ring-btn h5 {
+  font-weight: 500;
+}
+
+#rings-container #ring-btn:hover {
+  cursor: pointer;
+  background: transparent;
+  border: 3px solid #4285f4;
+}
+#rings-container #ring-btn:hover h5 {
+  color: #4285f4;
+}
+
 #rings-container #small-ring{
   position: absolute;
   top: 50%;
@@ -768,14 +797,30 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .page6-btn {
-  background: linear-gradient(to right, #0844ff, #4d86f9);
+  /* background: linear-gradient(to right, #0844ff, #4d86f9); */
+  background: transparent;
+  border: 1px solid blue;
   width: fit-content;
-  color: #fff;
+  color: blue;
   font-family: reg;
   padding: 1.3vw 4vw;
   border-radius: 50px;
   margin: 0 auto;
   margin-top: 2vw;
+}
+
+.page6-btn h5 {
+  font-weight: 500;
+}
+
+.page6-btn:hover {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #4285f4;
+}
+
+.page6-btn:hover h5 {
+  color: #4285f4;
 }
 
 .page6-products > img {
