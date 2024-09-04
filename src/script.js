@@ -29,21 +29,34 @@ const page2Animation = () => {
 
 page2Animation();
 
-// Page 3 Animation
-const page3Animation = () => {
-  var tl2 = gsap.timeline({
-    scrollTrigger:{
-      trigger:"#pg3-lower",
-      scroller:"body",
-      // markers:true,
-      start:"top 100%",
-      end:"top 80%",
-      scrub:1
+const page5Animation = () => {
+  var tl5 = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#page5",
+      scroller: "body",
+      start: "0% 0%",
+      end: "200% 0%",
+      pin: true,
+      scrub: 2,
+      // markers: true
     }
   })
-  tl2
-  .to("#page3",{
-    backgroundColor:"black"
+
+  tl5
+  .to("#page5 #card3", {
+    opacity: 0
+  },"aa")
+  .to("#page5 #circle-1", {
+    backgroundColor: "transparent"
+  },"aa")
+  .to("#page5 #circle-2", {
+    backgroundColor: "#000"
+  },"aa")
+  .from("#page5 #card2 .text-div h5", {
+    transform: "translateY(100%)"
+  },"a")
+  .from("#page5 #card2 #video", {
+    opacity: 0
   },"a")
   .from("#page5 #card2 .head-div h1", {
     transform: "translateY(100%)"
@@ -376,8 +389,11 @@ function canvas(){
     end: `300% top`,
   });
   
-  }
-  canvas()
+}
+canvas()
+
+// Page 3 Animation
+
 
 
 
