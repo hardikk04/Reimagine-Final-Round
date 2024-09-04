@@ -148,6 +148,9 @@ body::-webkit-scrollbar-thumb:active {
 #nav-p1 h4 {
   font-weight: 500;
 }
+#navbar #menu{
+  display: none;
+}
 #nav-p2 {
   display: flex;
   align-items: center;
@@ -1142,14 +1145,149 @@ body::-webkit-scrollbar-thumb:active {
 
 /* Responsive 1200px */
 @media (min-width: 993px) and (max-width: 1200px) {
+  #navbar h4{
+    font-size: 1.1vw;
+  }
+  #page1 #overlay-p1 h1 {
+    font-size: 6vw;
+    margin-top: 10vw;
+  }
+  #page1 #overlay-p1 h2 {
+    font-size: 6vw;
+    font-weight: 800;
+  }
+  #page1 #overlay-p1 p {
+    font-size: 1.5vw;
+    width: 40%;
+  }
+  #leftring{
+    position: absolute;
+    left: -9%;
+    transform: rotate(-30deg);
+    top: 50%;
+    width: 20%;
+  }
+  #rightring{
+    position: absolute;
+    right: -12%;
+    transform: rotate(-50deg);
+    top: 30%;
+    width: 30%;
+  }
+  #page3 .txt #text h5 {
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: #5f6368;
+}
+#page5 .card #left #text h5 {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+#canvas-card {
+  position: relative;
+  height: 100vw;
+}
+#canvas-card #chat {
+  position: absolute;
+  width: 68%;
+  top: 10%;
+  left: 50%;
+  padding: 0 6.5vw;
+  padding-top: 10vw;
+}
+#chat .message p {
+  font-size: 1.3vw;
+}
+#rings-container #large-ring {
+  width: 80vw;
+  height: 80vw;
+ 
+}
+#rings-container #small-ring {
+  width: 70vw;
+  height: 70vw;
+}
+.page6-products-dets > h1 {
+  font-size: 4vw;
+}
+.page6-products-dets > p {
+  font-weight: 800;
+  font-size: 1.5vw;
+}
+.page7-container {
+  position: relative;
+  width: 100%;
+  margin-top: 20vw;
+}
+.page7-elem > p {
+  font-size: 1.3vw;
+}
+.page7-container > p {
+  font-size: 1.8vw;
+  font-weight: 500;
+}
+.last-footer-box {
+  position: relative;
+  margin-top: 20vw;
+}
+.last-footer{
+  padding-top: 20vw;
+}
+.last-footer > h1 {
+  font-size: 12vw;
+}
 }
 
 /* Responsive 992px */
 @media (min-width: 769px) and (max-width: 992px) {
+  
 }
 
 /* Responsive 768px */
 @media (min-width: 601px) and (max-width: 768px) {
+  #nav-p1{
+    display: none;
+  }
+  #logom{
+    width: 4vw !important;
+  }
+  #navbar h4{
+    display: none;
+  }
+  #menu{
+    display: block !important;
+  }
+  #search{
+    display: none;
+  }
+  #page1 #overlay-p1 h1 {
+    font-size: 6vw;
+    margin-top: 15vw;
+}
+#page1 #overlay-p1 h2 {
+  font-size: 6vw;
+}
+#page1 #overlay-p1 p {
+  font-size: 2vw;
+  width: 40%;
+  margin-top: 1.5vw;
+}
+#page1 spline-viewer {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 75%;
+}
+#rightring {
+  top: 25%;
+  width: 40%;
+  right: -18%;
+}
+#leftring {
+  transform: rotate(-35deg);
+}
 }
 
 /* Responsive 600px */
