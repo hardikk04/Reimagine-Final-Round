@@ -1,22 +1,12 @@
 /* Fonts Loader*/
 @font-face {
-  font-family: cocaCola;
-  src: url(/fonts/cocacola1.woff2);
+  font-family: reg;
+  src: url(/fonts/Product\ Sans\ Regular.woff2);
 }
 
 @font-face {
-  font-family: heading;
-  src: url(/fonts/headingFonts/TWKLausanne-300.05f1f099.woff2);
-}
-
-@font-face {
-  font-family: lightFont;
-  src: url(/fonts/paraFonts/light.woff2);
-}
-
-@font-face {
-  font-family: mediumFont;
-  src: url(/fonts/paraFonts/medium.woff2);
+  font-family: bold;
+  src: url(/fonts/Product\ Sans\ Bold.woff2);
 }
 
 /* Boiler Plate */
