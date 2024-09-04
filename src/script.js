@@ -1,12 +1,9 @@
 // Importing the libraries
-import * as THREE from "three";
 import "remixicon/fonts/remixicon.css";
 import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
-import vertexShader from "./shaders/Imghover/vertex.glsl";
-import fragmentShader from "./shaders/Imghover/fragment.glsl";
 // import Swiper from "swiper/bundle";
 // import "swiper/css/bundle";
 
@@ -85,21 +82,19 @@ const page5Animation = () => {
 }
 page5Animation()
 
-function canvas(){
-  
+function canvas() {
   const canvas = document.querySelector("canvas");
   const context = canvas.getContext("2d");
-  
+
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  
-  
+
   window.addEventListener("resize", function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     render();
   });
-  
+
   function files(index) {
     var data = `
        ./canvas/canvas (1).png
@@ -311,14 +306,14 @@ function canvas(){
    `;
     return data.split("\n")[index];
   }
-  
+
   const frameCount = 206;
-  
+
   const images = [];
   const imageSeq = {
     frame: 1,
   };
-  
+
   for (let i = 0; i < frameCount; i++) {
     const img = new Image();
     img.src = files(i);
@@ -332,32 +327,31 @@ function canvas(){
       start: `top top`,
       end: `300% top`,
       scroller: `body`,
-    }
-  })
+    },
+  });
   ctl
-  .to(imageSeq, {
-    frame: frameCount - 1,
-    snap: "frame",
-    ease: `none`,
-    onUpdate: render,
-  })
-  .to(canvas,{
-    transform: "scale(.2)",
-    top: "11%",
-    left: "-2.3%",
-    width:"88%"
-  })
-  .to(canvas,{
-    opacity:0,
-  })
-  
-  
+    .to(imageSeq, {
+      frame: frameCount - 1,
+      snap: "frame",
+      ease: `none`,
+      onUpdate: render,
+    })
+    .to(canvas, {
+      transform: "scale(.2)",
+      top: "11%",
+      left: "-2.3%",
+      width: "88%",
+    })
+    .to(canvas, {
+      opacity: 0,
+    });
+
   images[1].onload = render;
-  
+
   function render() {
     scaleImage(images[imageSeq.frame], context);
   }
-  
+
   function scaleImage(img, ctx) {
     var canvas = ctx.canvas;
     var hRatio = canvas.width / img.width;
@@ -379,12 +373,11 @@ function canvas(){
     );
   }
   ScrollTrigger.create({
-  
     trigger: "#canvas-card",
     pin: true,
     // markers:true,
     scroller: `body`,
-  //   set start end according to preference
+    //   set start end according to preference
     start: `top top`,
     end: `300% top`,
   });
@@ -467,6 +460,7 @@ const page6Animation = () => {
         {
           top: "-150%",
           opacity: 0,
+          ease: "power1.in",
           onComplete: () => {
             gsap.to(".page6-product-img1", {
               top: "100%",
@@ -496,6 +490,7 @@ const page6Animation = () => {
         {
           top: "-150%",
           opacity: 0,
+          ease: "power1.out",
           onComplete: () => {
             gsap.to(".page6-product-img2", {
               top: "100%",
@@ -518,23 +513,77 @@ const page6Animation = () => {
       tl.to(".page6-product-cursor>h3", {
         text: "",
       });
-      tl.to(".page6-product-cursor>h3", {
-        text: "NEXT",
-      });
+      tl.to(
+        ".page6-product-cursor>h3",
+        {
+          text: "NEXT",
+        },
+        "a"
+      );
+      tl.to(
+        ".page6-products-dets>h1",
+        {
+          text: "Pulmonary tuberculosis",
+        },
+        "a"
+      );
+      tl.to(
+        ".page6-products-dets>p",
+        {
+          text: "The most common symptom in tuberculosis of the lung is fever. Fever can be a low-grade fever that rarely crosses 100 °F",
+        },
+        "a"
+      );
     } else if (productFlag === "product2") {
       product2();
       const tl = gsap.timeline();
       tl.to(".page6-product-cursor>h3", {
         text: "",
       });
-      tl.to(".page6-product-cursor>h3", {
-        text: "NEXT",
-      });
+      tl.to(
+        ".page6-product-cursor>h3",
+        {
+          text: "NEXT",
+        },
+        "a"
+      );
+      tl.to(
+        ".page6-products-dets>h1",
+        {
+          text: "Extrapulmonary tuberculosis",
+        },
+        "a"
+      );
+      tl.to(
+        ".page6-products-dets>p",
+        {
+          text: "Extrapulmonary tuberculosis is tuberculosis within a location in the body other than the lungs. It accounts for an increasing fraction of active cases",
+        },
+        "a"
+      );
     }
   });
 };
 
 page6Animation();
 
+const page7Animation = () => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      scroller: "body",
+      trigger: "#page7",
+      start: "top 0%",
+      end: "top -100%",
+      scrub: true,
+      pin: true,
+    },
+  });
+  tl.to(".page7-elem", {
+    width: "24%",
+    stagger: 0.1,
+    backgroundColor: "#e2ffdf",
+    color: "#07003f",
+  });
+};
 
-
+page7Animation();
