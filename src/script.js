@@ -186,26 +186,82 @@ const page3Animation = () => {
 
   new Sketch({ dom: document.querySelector(".container-canvas") });
 
-  var tl2 = gsap.timeline({
-    scrollTrigger:{
-      trigger:"#pg3-lower",
-      scroller:"body",
-      // markers:true,
-      start:"top 100%",
-      end:"top 80%",
-      scrub:1
-    }
-  })
-  tl2
-  .to("#page3",{
-    backgroundColor:"black"
-  },"a")
-  .to("#page3 h1",{
-    color:"white"
-  },"a")
+  // var tl2 = gsap.timeline({
+  //   scrollTrigger:{
+  //     trigger:"#pg3-lower",
+  //     scroller:"body",
+  //     // markers:true,
+  //     start:"top 100%",
+  //     end:"top 80%",
+  //     scrub:1
+  //   }
+  // })
+  // tl2
+  // .to("#page3",{
+  //   backgroundColor:"black"
+  // },"a")
+  // .to("#page3 h1",{
+  //   color:"white"
+  // },"a")
 };
 
 page3Animation();
+
+const page5Animation = () => {
+  var tl5 = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#page5",
+      scroller: "body",
+      start: "0% 0%",
+      end: "200% 0%",
+      pin: true,
+      scrub: 2,
+      // markers: true
+    }
+  })
+
+  tl5
+  .to("#page5 #card3", {
+    opacity: 0
+  },"aa")
+  .to("#page5 #circle-1", {
+    backgroundColor: "transparent"
+  },"aa")
+  .to("#page5 #circle-2", {
+    backgroundColor: "#000"
+  },"aa")
+  .from("#page5 #card2 .text-div h5", {
+    transform: "translateY(100%)"
+  },"a")
+  .from("#page5 #card2 #video", {
+    opacity: 0
+  },"a")
+  .from("#page5 #card2 .head-div h1", {
+    transform: "translateY(100%)"
+  },"a")
+  .to("#page5 #card2", {
+    opacity: 0
+  },"bb")
+  .to("#page5 #circle-2", {
+    backgroundColor: "transparent"
+  },"bb")
+  .to("#page5 #circle-3", {
+    backgroundColor: "#000"
+  },"bb")
+  .from("#page5 #card1 .text-div h5", {
+    transform: "translateY(100%)"
+  },"b")
+  .from("#page5 #card1 #video", {
+    opacity: 0
+  },"b")
+  .from("#page5 #card1 .head-div h1", {
+    transform: "translateY(100%)"
+  },"b")
+  .from("#page5 #card1 .sub-head-div h3", {
+    transform: "translateY(100%)"
+  },"b")
+}
+page5Animation()
 
 function canvas(){
   
@@ -514,61 +570,7 @@ function canvas(){
   }
   canvas()
 
-const page5Animation = () => {
-  var tl5 = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#page5",
-      scroller: "body",
-      start: "0% 0%",
-      end: "200% 0%",
-      pin: true,
-      scrub: 2,
-      // markers: true
-    }
-  })
 
-  tl5
-  .to("#page5 #card3", {
-    opacity: 0
-  },"aa")
-  .to("#page5 #circle-1", {
-    backgroundColor: "transparent"
-  },"aa")
-  .to("#page5 #circle-2", {
-    backgroundColor: "#000"
-  },"aa")
-  .from("#page5 #card2 .text-div h5", {
-    transform: "translateY(100%)"
-  },"a")
-  .from("#page5 #card2 #video", {
-    opacity: 0
-  },"a")
-  .from("#page5 #card2 .head-div h1", {
-    transform: "translateY(100%)"
-  },"a")
-  .to("#page5 #card2", {
-    opacity: 0
-  },"bb")
-  .to("#page5 #circle-2", {
-    backgroundColor: "transparent"
-  },"bb")
-  .to("#page5 #circle-3", {
-    backgroundColor: "#000"
-  },"bb")
-  .from("#page5 #card1 .text-div h5", {
-    transform: "translateY(100%)"
-  },"b")
-  .from("#page5 #card1 #video", {
-    opacity: 0
-  },"b")
-  .from("#page5 #card1 .head-div h1", {
-    transform: "translateY(100%)"
-  },"b")
-  .from("#page5 #card1 .sub-head-div h3", {
-    transform: "translateY(100%)"
-  },"b")
-}
-page5Animation()
 
 
 // Page 6 Animation
