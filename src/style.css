@@ -75,6 +75,67 @@ body::-webkit-scrollbar-thumb:active {
   z-index: 2;
 }
 
+/* Main loader */
+.main-loader {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  font-family: reg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loader-text > h1 {
+  position: relative;
+  font-size: 5vw;
+  color: #4285f4;
+}
+
+.main-loader-line {
+  position: relative;
+  width: 13vw;
+  height: 3px;
+}
+
+.main-loader-p {
+  position: relative;
+  width: 0%;
+  height: 100%;
+  background-color: #4285f4;
+  margin-top: 2vw;
+}
+
+.loader-c1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.c1 {
+  background-color: #4285f4;
+}
+
+.c2 {
+  background-color: #34a853;
+}
+
+.c3 {
+  background-color: #fbbc05;
+}
+
+.c4 {
+  background-color: #ea4335;
+}
+
 /* Page1 Start */
 
 #page1 {
@@ -135,7 +196,7 @@ body::-webkit-scrollbar-thumb:active {
   border-radius: 0.8vw;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.062);
 }
-#navbar #logom{
+#navbar #logom {
   width: 2.3vw;
 }
 #nav-p1 {
@@ -169,20 +230,22 @@ body::-webkit-scrollbar-thumb:active {
   background-clip: text;
   color: transparent;
 }
-#leftring{
+#leftring {
   position: absolute;
   left: -10%;
   transform: rotate(-30deg);
   top: 50%;
   width: 20%;
 }
-#rightring{
+
+#rightring {
   position: absolute;
   right: -15%;
   transform: rotate(-50deg);
   top: 20%;
   width: 30%;
 }
+
 #page1 #overlay-p1 h2 {
   font-size: 4vw;
   font-family: reg;
@@ -465,7 +528,7 @@ body::-webkit-scrollbar-thumb:active {
   justify-content: center;
   padding-top: 5vw;
 }
-#rings-container #line-hide{
+#rings-container #line-hide {
   width: 100%;
   height: 3vw;
   background-color: black;
@@ -474,7 +537,7 @@ body::-webkit-scrollbar-thumb:active {
   left: 0;
   top: -4%;
 }
-#rings-container #logor{
+#rings-container #logor {
   width: 5vw;
   margin-bottom: 2vw;
 }
@@ -505,7 +568,7 @@ body::-webkit-scrollbar-thumb:active {
   font-weight: 500;
 }
 
-#rings-container #small-ring{
+#rings-container #small-ring {
   position: absolute;
   top: 50%;
   left: 50%;
