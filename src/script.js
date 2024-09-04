@@ -396,7 +396,7 @@ const ringAnimation = () => {
       end: "30% 00%",
       // pin: true,
       scrub: 2,
-      markers: true
+      // markers: true
     }
   })
 
