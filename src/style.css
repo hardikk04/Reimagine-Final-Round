@@ -83,11 +83,11 @@ body::-webkit-scrollbar-thumb:active {
   width: 100%;
   background-color: #fff;
 }
-#page1 spline-viewer{
+#page1 spline-viewer {
   position: absolute;
   left: 50%;
   top: 75%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 50%;
   height: 80%;
 }
@@ -184,8 +184,6 @@ body::-webkit-scrollbar-thumb:active {
   margin-top: 1.2vw;
   font-weight: 100;
 }
-
-
 
 /* Page1 End */
 
@@ -437,37 +435,36 @@ body::-webkit-scrollbar-thumb:active {
   font-size: 0.8vw;
 }
 
-
 /* Page4 End */
 /* rings-container start */
-#rings-container{
+#rings-container {
   position: relative;
-    height: 130vh;
-    width: 100%;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5vw;
+  height: 130vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5vw;
 }
-#rings-container #logor{
+#rings-container #logor {
   width: 5vw;
   margin-bottom: 2vw;
 }
-#rings-container h1{
+#rings-container h1 {
   color: #fff;
   font-size: 3vw;
   font-family: reg;
   font-weight: 500;
 }
 
-#rings-container  p{
+#rings-container p {
   color: #fff;
   font-family: reg;
   width: 30%;
   text-align: center;
-  margin:1.5vw 0 ;
+  margin: 1.5vw 0;
 }
 #rings-container #ring-btn {
   background: transparent;
@@ -492,11 +489,11 @@ body::-webkit-scrollbar-thumb:active {
   color: #4285f4;
 }
 
-#rings-container #small-ring{
+#rings-container #small-ring {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 50vw;
   height: 50vw;
   animation-name: rotate;
@@ -504,11 +501,11 @@ body::-webkit-scrollbar-thumb:active {
   animation-iteration-count: infinite;
   animation-duration: 18s;
 }
-#rings-container #large-ring{
+#rings-container #large-ring {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 60vw;
   height: 60vw;
   animation-name: rotate;
@@ -518,16 +515,14 @@ body::-webkit-scrollbar-thumb:active {
   animation-direction: reverse;
 }
 @keyframes rotate {
-  0%{
-    transform: translate(-50%,-50%) rotate(0deg);
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
   }
-  100%{
-    transform: translate(-50%,-50%) rotate(360deg);
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
-  
 }
 /* rings-container end */
-
 
 /* Page5 Start */
 
@@ -901,7 +896,91 @@ body::-webkit-scrollbar-thumb:active {
   position: relative;
   height: 100vh;
   width: 100%;
+  padding: 2vw;
   background-color: #fff;
+}
+
+.page7-text > h3 {
+  font-weight: 600;
+}
+
+.page7-text > h1 {
+  font-size: 5vw;
+  width: 90%;
+}
+
+.page7-container {
+  position: relative;
+  width: 100%;
+  margin-top: 4vw;
+}
+
+.page7-container > h3 {
+  position: relative;
+  font-weight: 500;
+}
+
+.page7-container > p {
+  position: relative;
+  font-size: 1.2vw;
+  margin-top: 0.5vw;
+  font-weight: 600;
+}
+
+.page7-container-elems {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 1vw;
+  height: 45vh;
+  margin-top: 2vw;
+}
+
+.page7-elem {
+  position: relative;
+  padding: 2vw;
+  color: #fff;
+  border-radius: 1vw;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page7-elem > h1 {
+  font-size: 2vw;
+  white-space: nowrap;
+}
+
+.page7-elem > p {
+  font-size: 1vw;
+  width: 14vw;
+  margin-top: 1vw;
+}
+
+.page7-elem1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #217bfe;
+}
+
+.page7-elem2 {
+  position: relative;
+  width: 50%;
+  background-color: #217bfe;
+}
+
+.page7-elem3 {
+  position: relative;
+  width: 50%;
+  background-color: #217bfe;
+}
+
+.page7-elem4 {
+  position: relative;
+  width: 50%;
+  background-color: #217bfe;
 }
 
 /* Page7 End */
@@ -910,7 +989,7 @@ body::-webkit-scrollbar-thumb:active {
 
 #page8 {
   position: relative;
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   background-color: transparent;
 }
@@ -925,16 +1004,16 @@ body::-webkit-scrollbar-thumb:active {
   font-family: reg;
   padding: 2vw;
 }
-.last-footer #strip{
+.last-footer #strip {
   width: 100%;
   height: 20vw;
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.396) , transparent);
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.396), transparent); */
 }
 .last-footer > h1 {
-  font-size: 12vw;
+  font-size: 8vw;
   line-height: 1;
   white-space: nowrap;
   color: #217bfe;
@@ -942,11 +1021,11 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .last-footer > p {
-  font-size: 6vw;
+  font-size: 4vw;
   font-family: bold;
   text-align: center;
   color: #c4c4c4;
-  margin-top: 2vw;
+  margin-top: 1vw;
 }
 
 .last-footer-box {
@@ -1023,21 +1102,12 @@ body::-webkit-scrollbar-thumb:active {
   left: 50%;
   white-space: nowrap;
   font-size: 9vw;
-  background: linear-gradient(to bottom , #999999 , #99999942 60%);
+  background: linear-gradient(to bottom, #999999, #99999942 60%);
   color: transparent;
   background-clip: text;
-
 }
 
 /* Canvas */
-.container-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  height: 100vh;
-  width: 100%;
-}
 
 .webgl {
   opacity: 0;
