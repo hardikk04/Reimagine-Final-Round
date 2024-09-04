@@ -4,10 +4,80 @@ import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
-// import Swiper from "swiper/bundle";
-// import "swiper/css/bundle";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
+// Clutter Animation
+const clutterAnimation = (element) => {
+  const htmlTag = document.querySelector(element);
+  let clutter = "";
+
+  // Splitting the text content into individual letters and wrapping each in a span with a class
+  htmlTag.textContent.split("").forEach((word) => {
+    clutter += `<span class="inline-block">${word}</span>`;
+  });
+
+  // Updating the HTML content of the element with the animated spans
+  htmlTag.innerHTML = clutter;
+};
+
+// Lenis js
+
+const lenisJs = () => {
+  const lenis = new Lenis();
+
+  lenis.on("scroll", (e) => {});
+
+  lenis.on("scroll", ScrollTrigger.update);
+
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 500);
+  });
+
+  gsap.ticker.lagSmoothing(0);
+};
+lenisJs();
+
+const loaderAnimation = () => {
+  const tl = gsap.timeline({ repeat: -1 });
+  clutterAnimation(".loader-text>h1");
+  tl.from(".loader-text>h1>span", {
+    opacity: 0,
+    filter: "blur(10px)",
+    stagger: {
+      amount: 1,
+      from: "x",
+    },
+  });
+
+  gsap.to(".main-loader-p", {
+    width: "100%",
+    duration: 4,
+    onComplete: () => {
+      const tl = gsap.timeline();
+      tl.to(".c1", {
+        top: "-100%",
+      })
+        .to(".main-loader", {
+          top: "-100%",
+        })
+        .from("#navbar", {
+          y: "-130",
+          duration: 0.7,
+        })
+        .from("#overlay-p1 h1 , #overlay-p1 h2 ,#overlay-p1 p", {
+          opacity: 0,
+          filter: "blur(10px)",
+          duration: 0.7,
+        });
+    },
+  });
+};
+loaderAnimation();
 
 // Page2 Animation
 const page2Animation = () => {
@@ -542,7 +612,7 @@ const page6Animation = () => {
       trigger: "#page6",
       start: "top 30%",
       end: "top 0%",
-      markers: true,
+      // markers: true,
       scrub: 1,
     },
   });
