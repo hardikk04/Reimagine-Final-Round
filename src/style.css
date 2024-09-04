@@ -1,0 +1,179 @@
+/* Fonts Loader*/
+@font-face {
+  font-family: cocaCola;
+  src: url(/fonts/cocacola1.woff2);
+}
+
+@font-face {
+  font-family: heading;
+  src: url(/fonts/headingFonts/TWKLausanne-300.05f1f099.woff2);
+}
+
+@font-face {
+  font-family: lightFont;
+  src: url(/fonts/paraFonts/light.woff2);
+}
+
+@font-face {
+  font-family: mediumFont;
+  src: url(/fonts/paraFonts/medium.woff2);
+}
+
+/* Boiler Plate */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hide the default scrollbar */
+body::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+/* Customize scrollbar track */
+body::-webkit-scrollbar-track {
+  background-color: transparent; /* Set to the desired background color */
+}
+
+/* Customize scrollbar handle */
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust handle color and transparency */
+  border-radius: 3px; /* Adjust border radius to match the design */
+}
+
+/* Optionally, add hover and active styles */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(35, 35, 35, 0.7); /* Adjust handle color on hover */
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 1); /* Adjust handle color on active state */
+}
+
+*::selection {
+  color: #d91921;
+  background-color: rgb(53, 53, 53);
+}
+
+/* For spans */
+.inline-block {
+  display: inline-block;
+}
+
+#main {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Page1 Start */
+
+#page1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: red;
+}
+
+/* Page1 End */
+
+/* Page2 Start */
+
+#page2 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: rebeccapurple;
+}
+
+/* Page2 End */
+
+/* Page3 Start */
+
+#page3 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Page3 End */
+
+/* Page4 Start */
+
+#page4 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Page4 End */
+
+/* Page5 Start */
+
+#page5 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Page5 End */
+
+/* Page6 Start */
+
+#page6 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Page6 End */
+
+/* Page7 Start */
+
+#page7 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Page7 End */
+
+/* Page8 Start */
+
+#page8 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Page8 End */
+
+/* Responsive */
+
+/* Responsive 1200px */
+@media (min-width: 993px) and (max-width: 1200px) {
+}
+
+/* Responsive 992px */
+@media (min-width: 769px) and (max-width: 992px) {
+}
+
+/* Responsive 768px */
+@media (min-width: 601px) and (max-width: 768px) {
+}
+
+/* Responsive 600px */
+@media (max-width: 600px) {
+}
