@@ -27,6 +27,20 @@ const page2Animation = () => {
 page2Animation();
 
 const page5Animation = () => {
+  gsap.from("#pg5-header h1", {
+    opacity: 0,
+    filter: "blur(10px)",
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: "#page5",
+      scroller: "body",
+      start: "top 70%",
+      end: "top 40%",
+      // markers: true,
+      scrub: 1,
+    },
+  });
+
   var tl5 = gsap.timeline({
     scrollTrigger: {
       trigger: "#page5",
@@ -36,51 +50,120 @@ const page5Animation = () => {
       pin: true,
       scrub: 2,
       // markers: true
-    }
-  })
+    },
+  });
 
   tl5
-  .to("#page5 #card3", {
-    opacity: 0
-  },"aa")
-  .to("#page5 #circle-1", {
-    backgroundColor: "transparent"
-  },"aa")
-  .to("#page5 #circle-2", {
-    backgroundColor: "#000"
-  },"aa")
-  .from("#page5 #card2 .text-div h5", {
-    transform: "translateY(100%)"
-  },"a")
-  .from("#page5 #card2 #video", {
-    opacity: 0
-  },"a")
-  .from("#page5 #card2 .head-div h1", {
-    transform: "translateY(100%)"
-  },"a")
-  .to("#page5 #card2", {
-    opacity: 0
-  },"bb")
-  .to("#page5 #circle-2", {
-    backgroundColor: "transparent"
-  },"bb")
-  .to("#page5 #circle-3", {
-    backgroundColor: "#000"
-  },"bb")
-  .from("#page5 #card1 .text-div h5", {
-    transform: "translateY(100%)"
-  },"b")
-  .from("#page5 #card1 #video", {
-    opacity: 0
-  },"b")
-  .from("#page5 #card1 .head-div h1", {
-    transform: "translateY(100%)"
-  },"b")
-  .from("#page5 #card1 .sub-head-div h3", {
-    transform: "translateY(100%)"
-  },"b")
-}
-page5Animation()
+    .to(
+      "#page5 #card3",
+      {
+        opacity: 0,
+      },
+      "aa"
+    )
+    .to(
+      "#page5 #circle-1",
+      {
+        backgroundColor: "transparent",
+      },
+      "aa"
+    )
+    .to(
+      "#page5 #circle-2",
+      {
+        backgroundColor: "#000",
+      },
+      "aa"
+    )
+    .from(
+      "#page5 #card2 .text-div h5",
+      {
+        transform: "translateY(100%)",
+      },
+      "a"
+    )
+    .from(
+      "#page5 #card2 #video",
+      {
+        opacity: 0,
+      },
+      "a"
+    )
+    .from(
+      "#page5 #card2 .head-div h1",
+      {
+        transform: "translateY(100%)",
+      },
+      "a"
+    )
+    .to(
+      "#page5 #card2",
+      {
+        opacity: 0,
+      },
+      "bb"
+    )
+    .to(
+      "#page5 #circle-2",
+      {
+        backgroundColor: "transparent",
+      },
+      "bb"
+    )
+    .to(
+      "#page5 #circle-3",
+      {
+        backgroundColor: "#000",
+      },
+      "bb"
+    )
+    .from(
+      "#page5 #card1 .text-div h5",
+      {
+        transform: "translateY(100%)",
+      },
+      "b"
+    )
+    .from(
+      "#page5 #card1 #video",
+      {
+        opacity: 0,
+      },
+      "b"
+    )
+    .from(
+      "#page5 #card1 .head-div h1",
+      {
+        transform: "translateY(100%)",
+      },
+      "b"
+    )
+    .from(
+      "#page5 #card1 .sub-head-div h3",
+      {
+        transform: "translateY(100%)",
+      },
+      "b"
+    );
+};
+page5Animation();
+
+const page4Animation = () => {
+  gsap.from("#page4 h1", {
+    opacity: 0,
+    filter: "blur(10px)",
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: "#page4",
+      scroller: "body",
+      start: "top 70%",
+      end: "top 40%",
+      // markers: true,
+      scrub: 1,
+    },
+  });
+};
+page4Animation();
 
 function canvas() {
   const canvas = document.querySelector("canvas");
@@ -381,30 +464,102 @@ function canvas() {
     start: `top top`,
     end: `300% top`,
   });
-  
 }
-canvas()
+canvas();
 
 // Page 3 Animation
 
+const page3Animation = () => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      scroller: "body",
+      trigger: "#page3",
+      start: "top 30%",
+      end: "top -20%",
+      scrub: true,
+      // markers: true,
+    },
+  });
+  tl.from("#pg3-upper h1,#pg3-upper h5", {
+    opacity: 0,
+    filter: "blur(10px)",
+    stagger: 0.1,
+  });
 
+  const t2 = gsap.timeline({
+    scrollTrigger: {
+      scroller: "body",
+      trigger: "#pg3-lower",
+      start: "top 30%",
+      end: "top -20%",
+      scrub: true,
+      // markers: true,
+    },
+  });
+  t2.from("#pg3-lower h1, #pg3-lower h5", {
+    opacity: 0,
+    filter: "blur(10px)",
+    stagger: 0.1,
+  });
+};
+page3Animation();
 
+const ringAnimation = () => {
+  var tl6 = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: "#rings-container",
+        scroller: "body",
+        start: "-20% 00%",
+        end: "30% 00%",
+        // pin: true,
+        scrub: 2,
+        // markers: true
+      },
+    })
 
+    .from("#rings-container #large-ring", {
+      width: "0vw",
+      height: "0vw",
+    })
+    .from("#rings-container #small-ring", {
+      width: "0vw",
+      height: "0vw",
+      delay: -0.2,
+    });
+};
+ringAnimation();
 
 // Page 6 Animation
 const page6Animation = () => {
   const page6Products = document.querySelector(".page6-products");
 
-  // gsap.to(".page6-contianer", {
-  //   scale: 0.97,
-  //   scrollTrigger: {
-  //     scroller: "body",
-  //     trigger: ".page6-products",
-  //     start: "top 0%",
-  //     end: "top -100%",
-  //     scrub: true,
-  //   },
-  // });
+  gsap.from(".page6-product-img1", {
+    top: "-100%",
+    opacity: 0,
+    filter: "blur(10px)",
+    scrollTrigger: {
+      trigger: "#page6",
+      start: "top 30%",
+      end: "top 0%",
+      markers: true,
+      scrub: 1,
+    },
+  });
+
+  gsap.from(".page6-products h1, .page6-products p", {
+    opacity: 0,
+    filter: "blur(10px)",
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: "#page6",
+      scroller: "body",
+      start: "top 30%",
+      end: "top 0%",
+      // markers: true,
+      scrub: 1,
+    },
+  });
 
   page6Products.addEventListener("mousemove", (event) => {
     document.body.style.cursor = "none";
@@ -546,6 +701,28 @@ const page6Animation = () => {
 page6Animation();
 
 const page7Animation = () => {
+  const text = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#page7",
+      start: "top 50%",
+      end: "top 10%",
+      // markers: true,
+      scrub: true,
+    },
+  });
+
+  text.from(".page7-text", {
+    opacity: 0,
+    filter: "blur(10px)",
+    stagger: 0.1,
+  });
+
+  text.from(".page7-container>h3 , .page7-container>p", {
+    opacity: 0,
+    filter: "blur(10px)",
+    stagger: 0.1,
+  });
+
   const tl = gsap.timeline({
     scrollTrigger: {
       scroller: "body",
@@ -565,3 +742,21 @@ const page7Animation = () => {
 };
 
 page7Animation();
+
+const rings = () => {
+  gsap.from("#rings-container h1 , #rings-container p", {
+    opacity: 0,
+    filter: "blur(10px)",
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: "#rings-container",
+      scroller: "body",
+      start: "top 30%",
+      end: "top -10%",
+      // markers: true,
+      scrub: 1,
+    },
+  });
+};
+
+rings();

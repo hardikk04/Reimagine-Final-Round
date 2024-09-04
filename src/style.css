@@ -86,7 +86,7 @@ body::-webkit-scrollbar-thumb:active {
 #page1 spline-viewer {
   position: absolute;
   left: 50%;
-  top: 75%;
+  top: 75%; 
   transform: translate(-50%, -50%);
   width: 50%;
   height: 75%;
@@ -493,8 +493,7 @@ body::-webkit-scrollbar-thumb:active {
   margin: 1.5vw 0;
 }
 #rings-container #ring-btn {
-  background: transparent;
-  border: 1px solid blue;
+  background: linear-gradient(to bottom right, #3c4ef3, #182ef3);
   color: #fff;
   font-family: reg;
   padding: 1.3vw 4vw;
@@ -506,16 +505,7 @@ body::-webkit-scrollbar-thumb:active {
   font-weight: 500;
 }
 
-#rings-container #ring-btn:hover {
-  cursor: pointer;
-  background: transparent;
-  border: 3px solid #4285f4;
-}
-#rings-container #ring-btn:hover h5 {
-  color: #4285f4;
-}
-
-#rings-container #small-ring {
+#rings-container #small-ring{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1240,7 +1230,133 @@ body::-webkit-scrollbar-thumb:active {
 
 /* Responsive 992px */
 @media (min-width: 769px) and (max-width: 992px) {
+  #navbar h4 {
+    font-size: 1.3vw;
+  }
+
+  #page1 #overlay-p1 h1 {
+    margin-top: 8vw;
+  }
+
+  #page1 #overlay-p1 h1,
+  #page1 #overlay-p1 h2  {
+    font-size: 5vw;
+  }
+
+  #page1 #overlay-p1 p {
+    font-size: 1.6vw;
+  }
+
+  #page1 spline-viewer {
+    width: 70%;
+  }
+
+  #page3 .txt #heading h1 {
+    font-size: 3.5vw;
+  }
+
+  #page3 .txt #text h1 {
+    font-size: 4.5vw;
+    line-height: 1.1;
+    font-weight: 500;
+  }
+
+  #page3 .txt #text h5 {
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: #5f6368;
+  }
+
+  #pg5-header h1 {
+    font-size: 5vw;
+    line-height: 1;
+  }
+
+  #page5 .card #left #text h5 {
+    font-size: 1.6vw;
+    font-weight: 500;
+  }
+
+  #page5 .card #left #sub-head h3 {
+    font-size: 2.2vw;
+  }
   
+#page5 .card #left #heading h1 {
+  font-size: 4.2vw;
+  font-weight: 500;
+  line-height: 1.1;
+  }
+
+  #rings-container #logor{
+    width: 8vw;
+    margin-bottom: 2vw;
+  }
+
+  #rings-container h1 {
+    color: #fff;
+    font-size: 4vw;
+  }
+
+  #rings-container p {
+    font-size: 1.7vw;
+  }
+
+  #rings-container #small-ring{
+    width: 40vw;
+    height: 40vw;
+  }
+
+  #rings-container #large-ring{
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .page6-products-dets > h1 {
+    font-size: 3.5vw;
+  }
+
+  .page6-products-dets {
+    width: fit-content;
+  }
+
+  .page6-products-dets > p {
+    font-size: 1.8vw;
+    font-weight: 600;
+  }
+
+  .page7-text > h3 {
+    font-size: 2.5vw;
+  }
+
+  .page7-container > h3 {
+    font-size: 2vw;
+  }
+
+  .page7-container > p {
+  font-size: 1.8vw;
+  }
+
+  .page7-elem > p {
+    font-size: 1.5vw;
+  }
+
+  .last-footer > p {
+    font-size: 5vw;
+  }
+
+  .last-footer-box {
+    margin-top: 15vw;
+  }
+
+  .last-footer-top > h3 {
+    font-size: 2vw;
+    font-weight: 500;
+  }
+
+  .last-footer-top > i {
+    font-size: 2vw;
+  }
+
 }
 
 /* Responsive 768px */
@@ -1292,4 +1408,5 @@ body::-webkit-scrollbar-thumb:active {
 
 /* Responsive 600px */
 @media (max-width: 600px) {
+  
 }
