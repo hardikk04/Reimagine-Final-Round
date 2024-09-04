@@ -24,3 +24,4 @@ const lenisJs = () => {
   gsap.ticker.lagSmoothing(0);
 };
 lenisJs();
+
