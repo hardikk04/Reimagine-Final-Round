@@ -25,6 +25,7 @@ body,
 html {
   width: 100%;
   height: 100%;
+  font-family: reg;
 }
 
 /* Hide the default scrollbar */
@@ -254,7 +255,12 @@ body::-webkit-scrollbar-thumb:active {
 
 #page3 .txt #text h1 {
   font-size: 4vw;
+  line-height: 1.1;
   font-weight: 500;
+}
+
+#page3 .txt #text #txt-3 {
+  margin-bottom: 1vw;
 }
 
 #page3 .txt #text h5 {
@@ -333,7 +339,7 @@ body::-webkit-scrollbar-thumb:active {
   z-index: 2;
   width: 100%;
   height: 68vw;
-  background-color: black;
+  background-color: rgb(255, 140, 140);
   padding-bottom: 4vw;
 }
 #canvas-card canvas {
@@ -426,6 +432,170 @@ body::-webkit-scrollbar-thumb:active {
   position: relative;
   height: 100vh;
   width: 100%;
+  font-family: reg;
+  padding: 0vw 2vw;
+  background-color: #d91921;
+}
+
+#pg5-header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pg5-header h1 {
+  font-size: 4vw;
+  line-height: 1;
+}
+
+#pg5-header h1 span {
+  color: #3771fc;
+}
+
+#page5 #cards-wrapper {
+  width: 100%;
+  height: 85vh;
+  position: relative;
+}
+
+#page5 #cards-wrapper #pagination-div {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  top: 90%;
+  left: 97%;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#page5 #cards-wrapper #pagination-div .pg5-circle {
+  width: 0.5vw;
+  height: 0.5vw;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+#page5 #cards-wrapper #pagination-div #circle-1 {
+  background-color: #000;
+}
+
+#page5 .card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 2vw;
+  display: flex;
+  border-radius: 20px;
+}
+
+#page5 #card1 {
+  z-index: 2;
+  background-color:  #fff6df;
+}
+
+#page5 .text-div {
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+}
+
+#page5 .head-div {
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+}
+
+#page5 .sub-head-div {
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+}
+
+#page5 #card2 {
+  z-index: 3;
+  background-color:  #e2ffdf;
+}
+
+#page5 #card3 {
+  z-index: 4;
+  background-color:  #ffdfdf;
+}
+
+#page5 .card #left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#page5 .card #upper {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+#page5 .card #left #text h5 {
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+#page5 .card #left #sub-head h3 {
+  font-size: 1.5vw;
+}
+
+#page5 .card #left #heading h1 {
+  font-size: 4vw;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+#page5 .card #left #heading h1 span {
+  color: #2c66fd;
+}
+
+#page5 .card #right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+#page5 .card #right #video {
+  width: 70%;
+  height: 75%;
+  background-color: darkgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page5 .card #right #video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#page5 .card #icon{
+  width: 2.5vw;
+  height: 2.5vw;
+  background-color: #000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page5 .card #icon i {
+  font-size: 1.5vw;
+  color: #fff;
+  font-weight: 100;
 }
 
 /* Page5 End */
