@@ -74,7 +74,90 @@ body::-webkit-scrollbar-thumb:active {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-color: red;
+  background-color: #fff;
+}
+#page1 >img{
+  position: absolute;
+  top: -10%;
+  width: 140%;
+  left: 50%;
+  transform: translate(-50%,0);
+ 
+}
+
+#page1 #overlay-p1{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  padding: 1.2vw 2vw;
+  text-align: center;
+}
+#navbar{
+  width: 100%;
+  padding:1.6vw 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fffffff1;
+  font-family: reg;
+  border-radius: .8vw;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.062);
+}
+#navbar img{
+  width: 2vw;
+}
+#nav-p1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2vw;
+  text-transform: capitalize;
+}
+#nav-p1 h4{
+  font-weight: 500;
+}
+#nav-p2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+}
+#nav-p2 h4{
+  font-weight: 500;
+}
+#page1 #overlay-p1 h1{
+  font-size: 5vw;
+  font-family: reg;
+  font-weight: 500;
+  margin-top: 5vw;
+  color: #fff;
+}
+#page1 #overlay-p1 h2{
+  font-size: 5vw;
+  font-family: reg;
+  font-weight: 800;
+}
+
+
+#page1 #overlay-p1 p{
+  color: #fff;
+  font-family: reg;
+  font-size: 1.5vw;
+  width: 50%;
+  margin: 2.2vw auto;
+  font-weight: 100;
+}
+#page1 #overlay-p1 #home-btn{
+  background: linear-gradient(to right , #0844FF,#4D86F9);
+  width: fit-content;
+  color: #fff;
+  font-family: reg;
+  padding: 1.3vw 4vw;
+  border-radius: 50px;
+  margin: 0 auto;
 }
 
 /* Page1 End */
