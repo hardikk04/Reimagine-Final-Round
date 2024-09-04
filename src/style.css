@@ -470,8 +470,7 @@ body::-webkit-scrollbar-thumb:active {
   margin:1.5vw 0 ;
 }
 #rings-container #ring-btn {
-  background: transparent;
-  border: 1px solid blue;
+  background: linear-gradient(to bottom right, #3c4ef3, #182ef3);
   color: #fff;
   font-family: reg;
   padding: 1.3vw 4vw;
@@ -481,15 +480,6 @@ body::-webkit-scrollbar-thumb:active {
 
 #rings-container #ring-btn h5 {
   font-weight: 500;
-}
-
-#rings-container #ring-btn:hover {
-  cursor: pointer;
-  background: transparent;
-  border: 3px solid #4285f4;
-}
-#rings-container #ring-btn:hover h5 {
-  color: #4285f4;
 }
 
 #rings-container #small-ring{
