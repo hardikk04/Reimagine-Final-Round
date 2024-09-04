@@ -9,6 +9,11 @@
   src: url(/fonts/Product\ Sans\ Bold.woff2);
 }
 
+@font-face {
+  font-family: thin;
+  src: url(/fonts/ProductSans-Thin.woff2);
+}
+
 /* Boiler Plate */
 * {
   margin: 0;
@@ -177,8 +182,80 @@ body::-webkit-scrollbar-thumb:active {
 
 #page3 {
   position: relative;
-  height: 100vh;
+  height: 200vh;
   width: 100%;
+  font-family: reg;
+}
+
+#pg3-upper {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  display: flex;
+  padding: 3vw 2vw;
+  gap: 6vw;
+}
+
+#pg3-lower {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  display: flex;
+  gap: 6vw;
+  padding: 3vw 2vw;
+  padding-top: 0vw;
+}
+
+#page3 .txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#page3 .txt #heading h1 {
+  font-size: 2.5vw;
+  font-weight: 500;
+}
+
+#page3 .txt #heading .color h1 {
+  color: #3f78fb;
+}
+
+#page3 .txt #text h1 {
+  font-size: 4vw;
+  font-weight: 500;
+}
+
+#page3 .txt #text h5 {
+  font-size: 1vw;
+  font-weight: 600;
+  color: #5f6368;
+}
+
+
+.pg3-img #image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.pg3-img #image #image-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.pg3-img #image #image-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#pg3-upper .pg3-sections,
+#pg3-lower .pg3-sections {
+  width: 50%;
+  height: 100%;
 }
 
 /* Page3 End */
