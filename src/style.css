@@ -295,6 +295,7 @@ body::-webkit-scrollbar-thumb:active {
 .pg3-img #image #image-inner {
   width: 100%;
   height: 100%;
+  scale: 1.3;
 }
 
 .pg3-img #image #image-inner img {
@@ -797,8 +798,7 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .page6-btn {
-  /* background: linear-gradient(to right, #0844ff, #4d86f9); */
-  background: transparent;
+  background: linear-gradient(to right, #0844ff, #4d86f9);
   border: 1px solid blue;
   width: fit-content;
   color: blue;
@@ -807,10 +807,12 @@ body::-webkit-scrollbar-thumb:active {
   border-radius: 50px;
   margin: 0 auto;
   margin-top: 2vw;
+  transition: all ease 1s;
 }
 
 .page6-btn h5 {
   font-weight: 500;
+  color: #fff;
 }
 
 .page6-btn:hover {
