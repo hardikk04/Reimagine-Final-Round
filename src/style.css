@@ -196,6 +196,15 @@ body::-webkit-scrollbar-thumb:active {
   border-radius: 0.8vw;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.062);
 }
+#navbar h4:hover {
+  color: blue;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+#navbar h4 {
+  transition: all ease 0.5s;
+}
 #navbar #logom {
   width: 2.3vw;
 }
