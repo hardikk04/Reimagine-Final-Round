@@ -476,7 +476,6 @@ function canvas() {
     scrollTrigger: {
       scrub: 0.15,
       trigger: `#canvas-card>canvas`,
-      //   set start end according to preference
       start: `top top`,
       end: `300% top`,
       scroller: `body`,
@@ -491,13 +490,12 @@ function canvas() {
     })
     .to(canvas, {
       transform: "scale(.2)",
+      opacity:0,
       top: "11%",
       left: "-2.3%",
       width: "88%",
     })
-    .to(canvas, {
-      opacity: 0,
-    });
+    
 
   images[1].onload = render;
 

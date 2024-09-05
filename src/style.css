@@ -1441,7 +1441,7 @@ body::-webkit-scrollbar-thumb:active {
   }
   #page1 #overlay-p1 h1 {
     font-size: 6vw;
-    margin-top: 15vw;
+    margin-top: 20vw;
 }
 #page1 #overlay-p1 h2 {
   font-size: 6vw;
@@ -1554,11 +1554,30 @@ body::-webkit-scrollbar-thumb:active {
   #page1 #overlay-p1 h2 {
     font-size: 6vw;
   }
+#logom{
+  width: 4vw !important;
+}
+#navbar h4{
+  display: none;
+}
+#search{
+  display: none;
+}
+#menu{
+  display: block !important;
+}
+  #nav-p1{
+    display: none;
+  }
 
   #page1 #overlay-p1 p {
     font-size: 2.3vw;
   }
 
+  #page1 #overlay-p1 h1{
+    font-size: 6vw;
+    margin-top: 20vw;
+}
   #leftring{
     position: absolute;
     left: -15%;
@@ -1566,6 +1585,11 @@ body::-webkit-scrollbar-thumb:active {
     top: 50%;
     width: 30%;
   }
+  #page1 #overlay-p1 p {
+    font-size: 2.8vw;
+    width: 60%;
+    margin-top: 3vw;
+}
   #rightring{
     position: absolute;
     right: -20%;
@@ -1602,11 +1626,6 @@ body::-webkit-scrollbar-thumb:active {
   #pg3-upper #pg3-upper-right {
     width: 100%;
   }
-
-
-
-
-
 
 
   #pg3-lower {
@@ -1717,5 +1736,61 @@ body::-webkit-scrollbar-thumb:active {
     font-size: 2.2vw;
     font-weight: 600;
   }
+
+  #rings-container h1 {
+    font-size: 4vw;
+  }
+
+  #rings-container p {
+    font-size: 2.3vw;
+  }
+
+  #rings-container #ring-btn {
+    background: linear-gradient(to bottom right, #3c4ef3, #182ef3);
+    color: #fff;
+    font-family: reg;
+    padding: 1.3vw 3vw;
+    margin-top: 2vw;
+    scale: 0.8;
+  }
+
+  .page6-strip1 > h1 {
+    font-size: 18vw;
+  }
+
+  .page6-products-dets > h1 {
+    font-size: 5vw;
+  }
+
+  .page6-products-dets > p {
+    font-size: 2.2vw;
+    font-weight: 600;
+  }
+
+
+
+  #page7{
+    display: none;
+  }
+
+  .last-footer > h1 {
+    font-size: 10vw;
+    margin-top: 5vw;
+}
+
+  .last-footer-box {
+    margin-top: 55vw;
+    padding: 8vw;
+    padding-top: 2vw;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+.last-footer-top > h3 {
+  font-size:4vw;
+  font-weight: 500;
+}
+.last-footer-bottom {
+  margin-top: 10vw;
+}
 
 }
