@@ -1684,8 +1684,38 @@ body::-webkit-scrollbar-thumb:active {
    
   }
   #rings-container #small-ring {
-    width: 80vw;
-    height: 80vw;
+    width: 90vw;
+    height: 90vw;
+  }
+
+  #rings-container h1 {
+    font-size: 4vw;
+  }
+
+  #rings-container p {
+    font-size: 2.3vw;
+  }
+
+  #rings-container #ring-btn {
+    background: linear-gradient(to bottom right, #3c4ef3, #182ef3);
+    color: #fff;
+    font-family: reg;
+    padding: 1.3vw 3vw;
+    margin-top: 2vw;
+    scale: 0.8;
+  }
+
+  .page6-strip1 > h1 {
+    font-size: 18vw;
+  }
+
+  .page6-products-dets > h1 {
+    font-size: 5vw;
+  }
+
+  .page6-products-dets > p {
+    font-size: 2.2vw;
+    font-weight: 600;
   }
 
 }
