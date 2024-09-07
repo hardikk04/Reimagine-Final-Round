@@ -1,6 +1,5 @@
 // Importing the libraries
 import "remixicon/fonts/remixicon.css";
-import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
@@ -24,23 +23,6 @@ const clutterAnimation = (element) => {
   // Updating the HTML content of the element with the animated spans
   htmlTag.innerHTML = clutter;
 };
-
-// Lenis js
-
-const lenisJs = () => {
-  const lenis = new Lenis();
-
-  lenis.on("scroll", (e) => {});
-
-  lenis.on("scroll", ScrollTrigger.update);
-
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 500);
-  });
-
-  gsap.ticker.lagSmoothing(0);
-};
-lenisJs();
 
 const loaderAnimation = () => {
   const tl = gsap.timeline({ repeat: -1 });
@@ -490,12 +472,11 @@ function canvas() {
     })
     .to(canvas, {
       transform: "scale(.2)",
-      opacity:0,
+      opacity: 0,
       top: "11%",
       left: "-2.3%",
       width: "88%",
-    })
-    
+    });
 
   images[1].onload = render;
 
@@ -530,7 +511,7 @@ function canvas() {
     scroller: `body`,
     //   set start end according to preference
     start: `top top`,
-    end: `300% top`,
+    end: `200% top`,
   });
 }
 canvas();
@@ -611,7 +592,6 @@ const page6Animation = () => {
       start: "top 30%",
       end: "top 0%",
       // markers: true,
-      scrub: 1,
     },
   });
 
@@ -796,7 +776,7 @@ const page7Animation = () => {
       scroller: "body",
       trigger: "#page7",
       start: "top 0%",
-      end: "top -100%",
+      end: "top -150%",
       scrub: true,
       pin: true,
     },

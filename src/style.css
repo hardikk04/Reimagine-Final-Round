@@ -59,13 +59,27 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 *::selection {
-  color: #d91921;
+  color: #4d86f9;
   background-color: rgb(53, 53, 53);
 }
 
 /* For spans */
 .inline-block {
   display: inline-block;
+}
+
+.three {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.webgl {
+  opacity: 0;
 }
 
 #main {
@@ -147,7 +161,7 @@ body::-webkit-scrollbar-thumb:active {
 #page1 spline-viewer {
   position: absolute;
   left: 50%;
-  top: 75%; 
+  top: 75%;
   transform: translate(-50%, -50%);
   width: 50%;
   height: 75%;
@@ -218,7 +232,7 @@ body::-webkit-scrollbar-thumb:active {
 #nav-p1 h4 {
   font-weight: 500;
 }
-#navbar #menu{
+#navbar #menu {
   display: none;
 }
 #nav-p2 {
@@ -299,6 +313,7 @@ body::-webkit-scrollbar-thumb:active {
   position: relative;
   height: 100%;
   width: 75%;
+  border-radius: 1vw;
   object-fit: cover;
 }
 
@@ -377,13 +392,14 @@ body::-webkit-scrollbar-thumb:active {
 .pg3-img #image #image-inner {
   width: 100%;
   height: 100%;
-  scale: 1.3;
+  /* scale: 1.3; */
 }
 
 .pg3-img #image #image-inner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 1vw;
 }
 
 #pg3-upper .pg3-sections,
@@ -864,6 +880,8 @@ body::-webkit-scrollbar-thumb:active {
   transform: translateX(-50%);
   height: 70vh;
   width: 50vw;
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
   background-color: #fff;
 }
 
@@ -1080,6 +1098,7 @@ body::-webkit-scrollbar-thumb:active {
   height: 100vh;
   width: 100%;
   background-color: transparent;
+  pointer-events: none;
 }
 
 /* Last footer */
@@ -1207,7 +1226,7 @@ body::-webkit-scrollbar-thumb:active {
 
 /* Responsive 1200px */
 @media (min-width: 993px) and (max-width: 1200px) {
-  #navbar h4{
+  #navbar h4 {
     font-size: 1.1vw;
   }
   #page1 #overlay-p1 h1 {
@@ -1222,14 +1241,14 @@ body::-webkit-scrollbar-thumb:active {
     font-size: 1.5vw;
     width: 40%;
   }
-  #leftring{
+  #leftring {
     position: absolute;
     left: -9%;
     transform: rotate(-30deg);
     top: 50%;
     width: 20%;
   }
-  #rightring{
+  #rightring {
     position: absolute;
     right: -12%;
     transform: rotate(-50deg);
@@ -1240,64 +1259,63 @@ body::-webkit-scrollbar-thumb:active {
     font-size: 1.5vw;
     font-weight: 500;
     color: #5f6368;
-}
-#page5 .card #left #text h5 {
-  font-size: 1.5vw;
-  font-weight: 500;
-}
-#canvas-card {
-  position: relative;
-  height: 100vw;
-}
-#canvas-card #chat {
-  position: absolute;
-  width: 68%;
-  top: 10%;
-  left: 50%;
-  padding: 0 6.5vw;
-  padding-top: 10vw;
-}
-#chat .message p {
-  font-size: 1.3vw;
-}
-#rings-container #large-ring {
-  width: 80vw;
-  height: 80vw;
- 
-}
-#rings-container #small-ring {
-  width: 70vw;
-  height: 70vw;
-}
-.page6-products-dets > h1 {
-  font-size: 4vw;
-}
-.page6-products-dets > p {
-  font-weight: 800;
-  font-size: 1.5vw;
-}
-.page7-container {
-  position: relative;
-  width: 100%;
-  margin-top: 20vw;
-}
-.page7-elem > p {
-  font-size: 1.3vw;
-}
-.page7-container > p {
-  font-size: 1.8vw;
-  font-weight: 500;
-}
-.last-footer-box {
-  position: relative;
-  margin-top: 20vw;
-}
-.last-footer{
-  padding-top: 20vw;
-}
-.last-footer > h1 {
-  font-size: 12vw;
-}
+  }
+  #page5 .card #left #text h5 {
+    font-size: 1.5vw;
+    font-weight: 500;
+  }
+  #canvas-card {
+    position: relative;
+    height: 100vw;
+  }
+  #canvas-card #chat {
+    position: absolute;
+    width: 68%;
+    top: 10%;
+    left: 50%;
+    padding: 0 6.5vw;
+    padding-top: 10vw;
+  }
+  #chat .message p {
+    font-size: 1.3vw;
+  }
+  #rings-container #large-ring {
+    width: 80vw;
+    height: 80vw;
+  }
+  #rings-container #small-ring {
+    width: 70vw;
+    height: 70vw;
+  }
+  .page6-products-dets > h1 {
+    font-size: 4vw;
+  }
+  .page6-products-dets > p {
+    font-weight: 800;
+    font-size: 1.5vw;
+  }
+  .page7-container {
+    position: relative;
+    width: 100%;
+    margin-top: 20vw;
+  }
+  .page7-elem > p {
+    font-size: 1.3vw;
+  }
+  .page7-container > p {
+    font-size: 1.8vw;
+    font-weight: 500;
+  }
+  .last-footer-box {
+    position: relative;
+    margin-top: 20vw;
+  }
+  .last-footer {
+    padding-top: 20vw;
+  }
+  .last-footer > h1 {
+    font-size: 12vw;
+  }
 }
 
 /* Responsive 992px */
@@ -1311,7 +1329,7 @@ body::-webkit-scrollbar-thumb:active {
   }
 
   #page1 #overlay-p1 h1,
-  #page1 #overlay-p1 h2  {
+  #page1 #overlay-p1 h2 {
     font-size: 5vw;
   }
 
@@ -1352,14 +1370,14 @@ body::-webkit-scrollbar-thumb:active {
   #page5 .card #left #sub-head h3 {
     font-size: 2.2vw;
   }
-  
-#page5 .card #left #heading h1 {
-  font-size: 4.2vw;
-  font-weight: 500;
-  line-height: 1.1;
+
+  #page5 .card #left #heading h1 {
+    font-size: 4.2vw;
+    font-weight: 500;
+    line-height: 1.1;
   }
 
-  #rings-container #logor{
+  #rings-container #logor {
     width: 8vw;
     margin-bottom: 2vw;
   }
@@ -1373,12 +1391,12 @@ body::-webkit-scrollbar-thumb:active {
     font-size: 1.7vw;
   }
 
-  #rings-container #small-ring{
+  #rings-container #small-ring {
     width: 40vw;
     height: 40vw;
   }
 
-  #rings-container #large-ring{
+  #rings-container #large-ring {
     width: 50vw;
     height: 50vw;
   }
@@ -1405,7 +1423,7 @@ body::-webkit-scrollbar-thumb:active {
   }
 
   .page7-container > p {
-  font-size: 1.8vw;
+    font-size: 1.8vw;
   }
 
   .page7-elem > p {
@@ -1428,154 +1446,154 @@ body::-webkit-scrollbar-thumb:active {
   .last-footer-top > i {
     font-size: 2vw;
   }
-
 }
 
 /* Responsive 768px */
 @media (min-width: 601px) and (max-width: 768px) {
-  #nav-p1{
+  #nav-p1 {
     display: none;
   }
-  #logom{
+  #logom {
     width: 4vw !important;
   }
-  #navbar h4{
+  #navbar h4 {
     display: none;
   }
-  #menu{
+  #menu {
     display: block !important;
   }
-  #search{
+  #search {
     display: none;
   }
   #page1 #overlay-p1 h1 {
     font-size: 6vw;
     margin-top: 20vw;
-}
-#page1 #overlay-p1 h2 {
-  font-size: 6vw;
-}
-#page1 #overlay-p1 p {
-  font-size: 2vw;
-  width: 40%;
-  margin-top: 1.5vw;
-}
-#page1 spline-viewer {
-  position: absolute;
-  left: 50%;
-  top: 75%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: 75%;
-}
-#rightring {
-  top: 25%;
-  width: 40%;
-  right: -18%;
-}
-#leftring {
-  transform: rotate(-35deg);
-}
-#pg3-upper {
-  height: 50%;
-  flex-direction: column;
-  padding: 3vw 2vw;
-  gap: 6vw;
-}
-#pg3-upper .pg3-sections, #pg3-lower .pg3-sections {
-  width: 100%;
-  height: 50%;
-}
-#page3 .txt #text h5 {
-  font-size:2vw;
-  font-weight: 600;
-  color: #5f6368;
-}
-#pg3-lower {
-  display: flex;
-  flex-direction: column;
-  padding: 3vw 2vw;
-  padding-top: 0vw;
-}
-#page5 .card #left #text h5 {
-  font-size: 1.6vw;
-  font-weight: 500;
-}
-#canvas-card {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  padding-bottom: 4vw;
-}
-#canvas-card #chat {
-  position: absolute;
-  width: 75%;
-  top: 16%;
-}
-#chat .message p {
-  font-family: reg;
-  font-size: 1.5vw;
-  font-weight: 500;
-}
-#rings-container #small-ring {
-  width: 65vw;
-  height: 65vw;
-}
-#rings-container #large-ring {
-  width: 75vw;
-  height: 75vw;
-}
-.page6-products-dets > h1 {
-  font-size: 5vw;
-}
-.page6-products-dets > p {
-  font-size: 2vw;
-  font-weight: 700;
-}
-.page7-container {
-  position: relative;
-  width: 100%;
-  margin-top: 35vw;
-}
-.page7-container > p {
-  position: relative;
-  font-size: 2.2vw;
-  margin-top: 0.5vw;
-  font-weight: 600;
-}
-.page7-elem > p {
-  font-size: 1.3vw;
-  font-weight: 500;
-}
-.last-footer-box {
-  margin-top: 33vw;
-  padding: 8vw;
-  padding-top: 2vw;
-  padding-bottom: 0;
-  overflow: hidden;
-}
-}
-/* Responsive 600px */
-@media (max-width: 600px) {
-  #page1 #overlay-p1 h1 ,
+  }
   #page1 #overlay-p1 h2 {
     font-size: 6vw;
   }
-#logom{
-  width: 4vw !important;
+  #page1 #overlay-p1 p {
+    font-size: 2vw;
+    width: 40%;
+    margin-top: 1.5vw;
+  }
+  #page1 spline-viewer {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 75%;
+  }
+  #rightring {
+    top: 25%;
+    width: 40%;
+    right: -18%;
+  }
+  #leftring {
+    transform: rotate(-35deg);
+  }
+  #pg3-upper {
+    height: 50%;
+    flex-direction: column;
+    padding: 3vw 2vw;
+    gap: 6vw;
+  }
+  #pg3-upper .pg3-sections,
+  #pg3-lower .pg3-sections {
+    width: 100%;
+    height: 50%;
+  }
+  #page3 .txt #text h5 {
+    font-size: 2vw;
+    font-weight: 600;
+    color: #5f6368;
+  }
+  #pg3-lower {
+    display: flex;
+    flex-direction: column;
+    padding: 3vw 2vw;
+    padding-top: 0vw;
+  }
+  #page5 .card #left #text h5 {
+    font-size: 1.6vw;
+    font-weight: 500;
+  }
+  #canvas-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    padding-bottom: 4vw;
+  }
+  #canvas-card #chat {
+    position: absolute;
+    width: 75%;
+    top: 16%;
+  }
+  #chat .message p {
+    font-family: reg;
+    font-size: 1.5vw;
+    font-weight: 500;
+  }
+  #rings-container #small-ring {
+    width: 65vw;
+    height: 65vw;
+  }
+  #rings-container #large-ring {
+    width: 75vw;
+    height: 75vw;
+  }
+  .page6-products-dets > h1 {
+    font-size: 5vw;
+  }
+  .page6-products-dets > p {
+    font-size: 2vw;
+    font-weight: 700;
+  }
+  .page7-container {
+    position: relative;
+    width: 100%;
+    margin-top: 35vw;
+  }
+  .page7-container > p {
+    position: relative;
+    font-size: 2.2vw;
+    margin-top: 0.5vw;
+    font-weight: 600;
+  }
+  .page7-elem > p {
+    font-size: 1.3vw;
+    font-weight: 500;
+  }
+  .last-footer-box {
+    margin-top: 33vw;
+    padding: 8vw;
+    padding-top: 2vw;
+    padding-bottom: 0;
+    overflow: hidden;
+  }
 }
-#navbar h4{
-  display: none;
-}
-#search{
-  display: none;
-}
-#menu{
-  display: block !important;
-}
-  #nav-p1{
+/* Responsive 600px */
+@media (max-width: 600px) {
+  #page1 #overlay-p1 h1,
+  #page1 #overlay-p1 h2 {
+    font-size: 6vw;
+  }
+  #logom {
+    width: 4vw !important;
+  }
+  #navbar h4 {
+    display: none;
+  }
+  #search {
+    display: none;
+  }
+  #menu {
+    display: block !important;
+  }
+  #nav-p1 {
     display: none;
   }
 
@@ -1583,11 +1601,11 @@ body::-webkit-scrollbar-thumb:active {
     font-size: 2.3vw;
   }
 
-  #page1 #overlay-p1 h1{
+  #page1 #overlay-p1 h1 {
     font-size: 6vw;
     margin-top: 20vw;
-}
-  #leftring{
+  }
+  #leftring {
     position: absolute;
     left: -15%;
     transform: rotate(-30deg);
@@ -1598,8 +1616,8 @@ body::-webkit-scrollbar-thumb:active {
     font-size: 2.8vw;
     width: 60%;
     margin-top: 3vw;
-}
-  #rightring{
+  }
+  #rightring {
     position: absolute;
     right: -20%;
     transform: rotate(-50deg);
@@ -1620,22 +1638,21 @@ body::-webkit-scrollbar-thumb:active {
     width: 100%;
   }
 
-  #pg3-upper #pg3-upper-left #heading h1{
+  #pg3-upper #pg3-upper-left #heading h1 {
     font-size: 4vw;
   }
 
-  #pg3-upper #pg3-upper-left #text h1{
+  #pg3-upper #pg3-upper-left #text h1 {
     font-size: 5vw;
   }
 
-  #pg3-upper #pg3-upper-left #text h5{
+  #pg3-upper #pg3-upper-left #text h5 {
     font-size: 2vw;
   }
 
   #pg3-upper #pg3-upper-right {
     width: 100%;
   }
-
 
   #pg3-lower {
     display: flex;
@@ -1646,15 +1663,15 @@ body::-webkit-scrollbar-thumb:active {
     width: 100%;
   }
 
-  #pg3-lower #pg3-lower-right #heading h1{
+  #pg3-lower #pg3-lower-right #heading h1 {
     font-size: 4vw;
   }
 
-  #pg3-lower #pg3-lower-right #text h1{
+  #pg3-lower #pg3-lower-right #text h1 {
     font-size: 5vw;
   }
 
-  #pg3-lower #pg3-lower-right #text h5{
+  #pg3-lower #pg3-lower-right #text h5 {
     font-size: 2vw;
   }
 
@@ -1709,7 +1726,6 @@ body::-webkit-scrollbar-thumb:active {
   #rings-container #large-ring {
     width: 90vw;
     height: 90vw;
-   
   }
   #rings-container #small-ring {
     width: 90vw;
@@ -1776,16 +1792,14 @@ body::-webkit-scrollbar-thumb:active {
     font-weight: 600;
   }
 
-
-
-  #page7{
+  #page7 {
     display: none;
   }
 
   .last-footer > h1 {
     font-size: 10vw;
     margin-top: 5vw;
-}
+  }
 
   .last-footer-box {
     margin-top: 55vw;
@@ -1793,13 +1807,12 @@ body::-webkit-scrollbar-thumb:active {
     padding-top: 2vw;
     padding-bottom: 0;
     overflow: hidden;
-}
-.last-footer-top > h3 {
-  font-size:4vw;
-  font-weight: 500;
-}
-.last-footer-bottom {
-  margin-top: 10vw;
-}
-
+  }
+  .last-footer-top > h3 {
+    font-size: 4vw;
+    font-weight: 500;
+  }
+  .last-footer-bottom {
+    margin-top: 10vw;
+  }
 }
