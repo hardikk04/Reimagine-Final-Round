@@ -1,3 +1,5 @@
+import { PerspectiveCamera } from "three";
+
 export const resizeThreeCanvas = ({
   camera,
   fov = null,
